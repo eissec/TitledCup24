@@ -1,0 +1,1456 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+/* animations */
+
+/* Initial style for fade-in-element */
+.fade-in-element {
+  opacity: 0; /* Start with zero opacity (completely transparent) */
+  transform: translateY(
+    20px
+  ); /* Optional: Add a slight upward translation for a smoother effect */
+}
+
+/* CSS animation for fade-in */
+.fade-in-animation {
+  opacity: 1; /* Element becomes fully opaque when animation is complete */
+  transform: translateY(0); /* Optional: Reset the translation */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition for smoother animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animation end */
+
+body {
+  background-color: var(--background);
+  padding: 0 0 50px 0;
+}
+
+.event-info-tab-info-component {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+:root {
+  --greyBlack: #262522;
+  --background: #302e2b;
+  --chessGreen: #81b64c;
+  --white: #fff;
+  --black: #000;
+  --white60: rgba(255, 255, 255, 0.6);
+  --white80: rgba(255, 255, 255, 0.8);
+  --black80: rgba(0, 0, 0, 0.8);
+  --mainColor: #b1332f;
+  --accentButton: #782020;
+  --secundary: #163054;
+  --borderRadius10: 10px;
+  --paddingXL: 40px;
+  --accent1: #08223b;
+  --accent2: #65c2ff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: montserrat;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  line-height: 1.2em !important;
+}
+
+.h228 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.h1AbsoluteBottom {
+  position: relative;
+  bottom: 20px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+  padding-top: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  text-align: center;
+  font-family: montserrat;
+}
+
+.h2Dark {
+  color: var(--black) !important;
+}
+
+.h260 {
+  text-align: start;
+}
+
+#fullOverview h2 {
+  margin-bottom: 1em;
+}
+
+#minisiteContainer h2 {
+  margin: 0 !important;
+}
+
+span {
+  color: var(--white);
+  line-height: 1.6em;
+}
+
+.absoluteCenterImage {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 40px;
+  z-index: 999;
+}
+
+.textWhite60SemiBold {
+  font-weight: 600;
+  color: var(--white60);
+}
+
+.textWhite60SemiBold20 {
+  font-weight: 600;
+  color: var(--white60);
+  font-size: 20px;
+}
+
+.lightSpan {
+  font-size: 16px;
+  color: var(--white60);
+}
+
+.bigText {
+  font-family: montserrat;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--white60);
+  text-align: center;
+}
+
+.titleContainer {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  max-width: 600px;
+}
+
+tr {
+  color: var(--white);
+}
+
+.trBlack {
+  color: var(--black);
+}
+
+.ulBlack > li {
+  color: var(--black);
+}
+
+#fullOverview .post-view-content {
+  margin: 0;
+}
+
+.newsItemTitle {
+  font-size: 20px;
+  padding: 15px 20px !important;
+  line-height: 1.2em;
+  margin: 0 !important;
+}
+
+.eventButton {
+  all: unset;
+  display: flex;
+  width: fit-content;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--accentButton);
+  background: var(--mainColor);
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+a.eventButton {
+  color: var(--white) !important;
+}
+
+.soldout {
+  opacity: 0.5;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+  color: white;
+}
+
+#minisiteContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bigEventCard {
+  display: flex;
+  background-color: var(--mainColor);
+  background: linear-gradient(180deg, #b1332f 0%, #a12622 100%);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-bottom: 4px solid var(--accentButton);
+  padding: 24px;
+}
+
+.bigEventCard > img {
+  max-width: 150px;
+}
+
+.bigEventCardTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bigEventCardTextContainer > h2 {
+  font-size: 28px;
+  text-align: start;
+}
+
+.bigEventCardTextContainer > a {
+  font-size: 22px;
+  font-family: montserrat;
+  font-weight: 700;
+  text-align: start;
+  color: var(--white60);
+}
+
+#eventNav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--greyBlack);
+  border-radius: var(--borderRadius10);
+  padding: 12px;
+  top: 20px;
+  width: 100%;
+  z-index: 999;
+  margin-top: 30px;
+}
+
+#eventNav > ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#eventNav ul > li {
+  margin: 0 !important;
+}
+
+.eventNavItem {
+  text-decoration: none;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: var(--white) !important;
+  width: 100%;
+  flex: grow;
+  word-break: keep-all;
+  text-align: center;
+  font-weight: 500;
+}
+
+.eventNavItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heroContainer {
+  background-color: var(--blueSCC);
+  background-image: url(https://images.chesscomfiles.com/uploads/ad_image/16755.b5815544.jpg);
+  background-size: cover;
+  background-position: center;
+  height: fit-content;
+  border-radius: var(--borderRadius10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 4px solid #08172a;
+}
+
+.winnerCongrats {
+  display: none; /* hidden for now */
+  font-family: Montserrat;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  background-color: var(--background);
+}
+
+#prizePool,
+#leaderboard {
+  background-color: var(--greyBlack);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerCollage {
+  width: 100%;
+  padding-top: 30px;
+}
+
+.winnerContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.winner1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.winner1 > img {
+  max-width: 250px !important;
+  width: 100%;
+}
+
+.winner1span {
+  background-color: var(--greyBlack);
+  padding: 5px 10px 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.winner2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.winner2 > img {
+  max-width: 150px !important;
+  width: 100%;
+}
+
+.winner2span {
+  background-color: var(--greyBlack);
+  padding: 5px 10px 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: fit-content;
+}
+
+.winner2 {
+  text-align: center;
+}
+
+.heroLogoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.heroLogoContainer .bigText {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+.heroLogo {
+  padding-top: 15px;
+  width: 40%;
+}
+
+.inlineLink {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.inlineLink:hover {
+  color: white;
+}
+
+.endTournamentNote {
+  padding: 20px;
+  background-color: #7fa650;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+
+#dateBanner {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--orangeCCL);
+  border-radius: var(--borderRadius10);
+}
+
+.left66 {
+  flex: 2;
+}
+
+.right33 {
+  flex: 1;
+}
+
+#peekCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.peekCard {
+  background-color: var(--greyBlack);
+  display: flex;
+  gap: 16px;
+  border-radius: 5px;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.peekCardIconContainer {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.peekCardIcon {
+  max-height: 22px;
+}
+
+.peekCardText {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white80);
+}
+
+#news {
+  padding: var(--paddingXL);
+  border-radius: 10px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.newsItem {
+  background-color: var(--black);
+  border-radius: var(--borderRadius10);
+  overflow: hidden;
+  height: 100%;
+}
+
+.newsItemImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Initial styles for #newsWrapper2 */
+#newsWrapper2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Apply these styles when #newsWrapper2 is open */
+#newsWrapper2.news-wrapper-open {
+  max-height: 1000px; /* Adjust as needed based on your content */
+  /* Additional styles for the open state */
+}
+
+/* Initial styles for #eventTalentWrapperExtra */
+#eventTalentWrapperExtra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Apply these styles when #eventTalentWrapperExtra is open */
+#eventTalentWrapperExtra.talent-wrapper-open {
+  max-height: 1000px; /* Adjust as needed based on your content */
+  /* Additional styles for the open state */
+}
+
+#newsButtonMore,
+#playerButtonMore,
+#talentButtonMore,
+#showMoreButton {
+  all: unset;
+  display: flex;
+  width: 101px;
+  padding: 9px 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--accentButton);
+  background: var(--mainColor);
+  margin: auto;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.eventVideoWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.eventVideoItem {
+  box-sizing: border-box;
+  background-color: var(--greyBlack);
+  border-radius: var(--borderRadius10);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.3s ease, visibility 0s linear 0.3s; /* Delay visibility change */
+  visibility: visible;
+}
+
+.eventVideoItem.hide {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: none;
+}
+
+.eventVideoItem:hover {
+  opacity: 0.75;
+}
+
+.eventVideoItemImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.eventVideoPlayIcon {
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 50%;
+  width: 40px;
+  offset: 10px;
+}
+
+.eventVideoTitle {
+  padding: 11px 16px 16px 16px;
+}
+
+.eventVideoTitle > span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* or 'nowrap' if you want to prevent wrapping */
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  max-height: 4em; /* Adjust based on your font size and line height */
+  line-height: 1.2em;
+}
+
+.eventVideoTitle > span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+#players {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--borderRadius10);
+  gap: 24px;
+  align-items: center;
+}
+
+.eventPlayerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventPlayerWrapper3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.eventPlayerWrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#eventPlayerWrapperExtra {
+  display: none;
+}
+
+.eventPlayerItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.eventPlayerItem span {
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+
+.eventPlayerImage {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.eventPlayerNameContainer {
+  position: absolute;
+  bottom: 5%;
+  background-color: var(--greyBlack);
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#about {
+  display: flex;
+  border-radius: var(--borderRadius10);
+  padding: var(--paddingXL);
+  background-image: url(https://images.chesscomfiles.com/uploads/ad_image/17419.2cf7269f.png);
+  background-size: cover;
+  background-position: top 35% right 80%;
+  gap: 50px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.partnerLeft {
+  padding-right: 100px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#partners {
+  background-color: var(--accent1);
+  padding: var(--paddingXL);
+  border-radius: var(--borderRadius10);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.eventsPartnerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.eventsPartnerItem {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.eventsPartnerImage {
+  width: 150px;
+  object-fit: contain;
+  max-height: 40px;
+}
+
+#talent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-radius: var(--borderRadius10);
+}
+
+#partnerPlacement {
+  display: flex;
+  padding: var(--paddingXL);
+  background-color: var(--greyBlack);
+  border-radius: var(--borderRadius10);
+}
+
+#fullOverview {
+  padding: 30px;
+  background-color: var(--greyBlack);
+  border-radius: var(--borderRadius10);
+  overflow: hidden;
+}
+
+/* seperate elements*/
+
+.accordionContainer {
+  background-color: var(--white);
+  border-radius: var(--borderRadius10);
+  overflow: hidden;
+}
+
+.accordion {
+  color: var(--black);
+  cursor: pointer;
+  background-color: white;
+  padding: 20px 30px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.accordion > span {
+  color: var(--black);
+}
+
+.active {
+  background-color: #fff;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.panel-open {
+  max-height: 1000px; /* Set a reasonable max-height for transition */
+}
+
+.panel-content {
+  padding: 0 30px 30px 30px; /* Apply padding to this container */
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.panel > p {
+  color: var(--black80) !important;
+}
+
+.panel a {
+  color: var(--accent1);
+  font-weight: 500;
+}
+
+/* modal css*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#videoModalContent {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--greyBlack);
+  margin: auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: var(--borderRadius10);
+  gap: 10px;
+}
+
+.modal-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.masonry-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  background-color: #ddd;
+  border-radius: 8px;
+  width: 250px;
+  margin-bottom: 20px;
+  height: fit-content;
+  overflow: hidden;
+  background-color: #262522;
+  cursor: pointer;
+}
+
+.xText {
+  height: fit-content !important;
+  background-color: #092846;
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.xTextSpan {
+  font-weight: 700;
+  line-height: 1.3em;
+  font-size: 17px;
+  font-family: montserrat;
+}
+
+.socialProfileInfo > img,
+.modal-profile-info > img {
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+}
+
+.socialProfileInfo,
+.modal-profile-info {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.socialPostMetaContainer {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    #000 0%,
+    rgba(0, 0, 0, 0.8) 53.65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.socialPostDescription {
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* or 'nowrap' if you want to prevent wrapping */
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  max-height: 3em; /* Adjust based on your font size and line height */
+  line-height: 1.2em;
+}
+
+.socialImageImg {
+  width: 100%;
+}
+
+.instaItem > img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.newsItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsImage {
+  width: 100%;
+}
+
+.newsItemTitleBox {
+  padding: 15px 20px 20px 20px;
+}
+
+.h3News {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin: 0 !important;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* or 'nowrap' if you want to prevent wrapping */
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  max-height: 4em; /* Adjust based on your font size and line height */
+}
+
+/*modal stuff*/
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #262522;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  display: flex;
+}
+
+.modal-left {
+  width: auto;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 250px;
+  padding: 20px;
+  gap: 16px;
+}
+
+.modal-description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+.winnerBigImage {
+  object-fit: contain;
+  width: 100%;
+}
+
+/*Leaderboard stuff*/
+.eventLeaderboard {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.topLeaderboard {
+  background-color: var(--secundary);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+.topLeaderboard > span {
+  font-family: montserrat;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.titlesLeaderboard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.titlesLeaderboard > span {
+  color: var(--mainColor);
+  font-size: 17px;
+  font-family: montserrat;
+  font-weight: 700;
+}
+
+.contentLeaderboard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  padding: 0px 20px;
+  align-items: center;
+  position: relative;
+}
+
+.itemLeaderboard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.itemLeaderboard > span {
+  color: var(--greyBlack);
+}
+
+.buttonLeaderboardContainer {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.hidden {
+  display: none;
+}
+
+.beyondVisible {
+  display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    gap: 60px;
+  }
+
+  .winnerCongrats {
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: -2px;
+  }
+
+  #minisiteContainer {
+    gap: 60px;
+  }
+
+  .event-info-content-tabs-container .event-info-content-tabs {
+    margin-bottom: 0 !important;
+  }
+
+  .h1AbsoluteBottom {
+    font-size: 16px;
+  }
+
+  .h260 {
+    font-size: 46px;
+  }
+
+  .heroLogoContainer .bigText {
+    font-size: 20px;
+  }
+
+  #eventNavButton {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--borderRadius10);
+    background: var(--greyBlack);
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .heroContainer {
+    border-radius: 0;
+    min-height: 200px;
+    padding: 0;
+  }
+
+  .headerCollage {
+    width: 100%;
+    margin: 0;
+  }
+
+  #dateBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 0;
+  }
+
+  .textWhite60SemiBold {
+    font-size: 16px;
+  }
+
+  #peekCardsContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .peekCard {
+    gap: 10px;
+    min-height: 85px;
+  }
+
+  .peekCardText {
+    width: 75%;
+    font-size: 14px;
+    line-height: 1.2em;
+    padding: 10px 7px;
+  }
+
+  .peekCardIconContainer {
+    width: 25%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .peekCardIcon {
+    height: 26px;
+  }
+
+  .topContainer {
+    gap: 20px;
+  }
+
+  .bigText {
+    font-size: 16px;
+  }
+
+  #news {
+    padding: 30px 0;
+    border-radius: 0;
+  }
+
+  #feed {
+    padding: 0;
+  }
+
+  #videos {
+    padding: 0;
+  }
+
+  .newsImageContainer {
+    height: auto;
+  }
+
+  .newsItemTitle {
+    font-size: 16px;
+  }
+
+  .newsWrapper,
+  #newsWrapper {
+    gap: 15px;
+  }
+
+  .eventPlayerNameContainer {
+    background-color: rgba(38, 37, 34, 0.75);
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  #eventVideoContainer {
+    padding: 30px 20px;
+    gap: 15px;
+  }
+
+  .eventVideoWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .eventVideoItemImage {
+    height: 130px;
+  }
+
+  .eventImageContainer {
+    height: auto;
+  }
+
+  #players {
+    padding: 0;
+    gap: 15px;
+    border-radius: 0;
+  }
+
+  .eventPlayerWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #about {
+    border-radius: 0;
+    padding: 40px 20px;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    gap: 20px;
+  }
+
+  .right {
+    gap: 10px;
+  }
+
+  #talent {
+    padding: 0;
+  }
+
+  .eventPlayerWrapper3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #partnerPlacement {
+    padding: 40px 20px;
+    flex-direction: column;
+    border-radius: 0;
+    gap: 30px;
+  }
+
+  .partnerLeft {
+    padding: 0;
+  }
+
+  #partners {
+    padding: 30px 20px;
+    border-radius: 0;
+  }
+
+  .eventsPartnerItem {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .eventsPartnerImage {
+    object-position: center;
+  }
+
+  #eventNav {
+    background-color: var(--greyBlack);
+    border-radius: 0;
+    padding: 30px;
+    position: absolute;
+    top: 100px;
+    width: 80%;
+    border-radius: 16px;
+    z-index: 999;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  #eventNav > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventNavItem {
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+  }
+
+  .eventNavItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .eventsPartnerWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .eventVideoPlayIcon {
+    top: 20%;
+  }
+
+  /* modal css*/
+  .modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .modal-content {
+    display: flex;
+    background-color: var(--black);
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .modal-right {
+    width: 100%;
+    max-width: none;
+  }
+
+  #videoModalContent {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .endTournamentNote {
+    border-radius: 0;
+  }
+}
