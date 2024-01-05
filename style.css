@@ -2,7 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+.event-info-content-tabs {
+  margin-bottom: 0 !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -76,7 +80,7 @@ a {
 
 h1 {
   font-family: montserrat;
-  font-size: 50px !important;
+  font-size: 50px;
   font-weight: 700 !important;
   line-height: 1.2em !important;
 }
@@ -250,7 +254,7 @@ a.eventButton {
 }
 
 .bigEventCard > img {
-  max-width: 150px;
+  max-width: 150px !important;
 }
 
 .bigEventCardTextContainer {
@@ -269,19 +273,18 @@ a.eventButton {
   font-family: montserrat;
   font-weight: 700;
   text-align: start;
-  color: var(--white60);
+  color: var(--white60) !important;
 }
 
 #eventNav {
   display: flex;
   justify-content: center;
   background-color: var(--greyBlack);
-  border-radius: var(--borderRadius10);
+  border-radius: 0 0 0.5em 0.5em;
   padding: 12px;
   top: 20px;
   width: 100%;
   z-index: 999;
-  margin-top: 30px;
 }
 
 #eventNav > ul {
@@ -290,8 +293,9 @@ a.eventButton {
   padding: 0;
   margin: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
+  width: 100%;
 }
 
 #eventNav ul > li {
@@ -1138,12 +1142,18 @@ a.eventButton {
   color: var(--greyBlack);
 }
 
+.itemLeaderboard > span:nth-child(2) {
+  font-weight: 700;
+}
+
 .buttonLeaderboardContainer {
   width: 100%;
   padding: 20px 0px;
   display: flex;
   justify-content: center;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  position: absolute;
+  bottom: 0;
 }
 
 .hidden {
@@ -1214,7 +1224,6 @@ a.eventButton {
 
   .heroContainer {
     border-radius: 0;
-    min-height: 200px;
     padding: 0;
   }
 
@@ -1235,14 +1244,13 @@ a.eventButton {
   }
 
   #peekCardsContainer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 0;
   }
 
   .peekCard {
     gap: 10px;
-    min-height: 85px;
   }
 
   .peekCardText {
@@ -1253,7 +1261,7 @@ a.eventButton {
   }
 
   .peekCardIconContainer {
-    width: 25%;
+    width: fit-content;
     display: flex;
     height: 100%;
     align-items: center;
@@ -1267,6 +1275,22 @@ a.eventButton {
 
   .topContainer {
     gap: 20px;
+  }
+
+  .bigEventCard > img {
+    width: 50px;
+  }
+
+  .bigEventCardTextContainer > h2 {
+    font-size: 22px;
+  }
+
+  .bigEventCardTextContainer > a {
+    font-size: 17px;
+  }
+
+  .eventLeaderboard {
+    width: 100%;
   }
 
   .bigText {
@@ -1325,9 +1349,13 @@ a.eventButton {
   }
 
   #players {
-    padding: 0;
+    padding: 0px 20px;
     gap: 15px;
     border-radius: 0;
+  }
+
+  #Leaderboard {
+    padding: 40px 20px;
   }
 
   .eventPlayerWrapper {

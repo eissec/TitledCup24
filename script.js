@@ -197,27 +197,25 @@ function getRightContentForItem(item) {
   }
 }
 
-// Function to show leaderboard beyond 10 items
-document.addEventListener("DOMContentLoaded", function () {
-  // Hide items beyond the first 10 upon load
-  var items = document.querySelectorAll(".itemLeaderboard");
-  for (var i = 10; i < items.length; i++) {
-    items[i].classList.add("hidden");
-  }
-});
+// Function to hide items beyond the first 10 upon load
+var eventLeaderboardItems = document.querySelectorAll(".itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItems.length; i++) {
+  eventLeaderboardItems[i].classList.add("hidden");
+}
 
 function toggleItems() {
   // Get all items with class "itemLeaderboard" beyond the 10th position
-  var items = document.querySelectorAll(".itemLeaderboard");
+  var eventLeaderboardItems = document.querySelectorAll(".itemLeaderboard");
 
   // Loop through items starting from the 11th position and toggle classes
-  for (var i = 10; i < items.length; i++) {
-    items[i].classList.toggle("hidden");
-    items[i].classList.toggle("beyondVisible");
+  for (var i = 10; i < eventLeaderboardItems.length; i++) {
+    eventLeaderboardItems[i].classList.toggle("hidden");
+    eventLeaderboardItems[i].classList.toggle("beyondVisible");
   }
-  // Toggle the button label
+
+  // Toggle the button label using getElementById
   var button = document.getElementById("leaderboardExpand");
-  button.innerHTML = items[10].classList.contains("hidden")
+  button.innerHTML = eventLeaderboardItems[10].classList.contains("hidden")
     ? "Show top 100"
     : "Close";
 }
