@@ -56,7 +56,7 @@ body {
 }
 
 :root {
-  --greyBlack: #262522;
+  --greyBlack: #262421;
   --background: #302e2b;
   --chessGreen: #81b64c;
   --white: #fff;
@@ -1144,6 +1144,20 @@ a.eventButton {
 
 .itemLeaderboard > span:nth-child(2) {
   font-weight: 700;
+}
+
+.itemLeaderboardRanking {
+  display: flex;
+  gap: 5px;
+}
+
+.itemLeaderboardRanking > span {
+  color: var(--greyBlack);
+}
+
+.itemLeaderboardRanking > span:nth-child(1) {
+  font-weight: 500;
+  color: var(--background);
 }
 
 .buttonLeaderboardContainer {
