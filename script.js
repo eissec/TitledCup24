@@ -198,6 +198,10 @@ function getRightContentForItem(item) {
 }
 
 // Function to hide items beyond the first 10 upon load
+document
+  .getElementById("leaderboardExpand")
+  .addEventListener("click", () => toggleItems());
+
 var eventLeaderboardItems = document.querySelectorAll(".itemLeaderboard");
 for (var i = 10; i < eventLeaderboardItems.length; i++) {
   eventLeaderboardItems[i].classList.add("hidden");
