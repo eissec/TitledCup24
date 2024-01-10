@@ -294,8 +294,7 @@ a.eventButton {
   margin: 0;
   align-items: center;
   justify-content: space-around;
-  gap: 10px;
-  width: 100%;
+  gap: 1.6rem;
 }
 
 #eventNav ul > li {
