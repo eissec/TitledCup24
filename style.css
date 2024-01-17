@@ -1129,6 +1129,10 @@ a.eventButton {
   position: relative;
 }
 
+.contentLeaderboardItems {
+  width: 100%;
+}
+
 .itemLeaderboard {
   width: 100%;
   display: flex;
