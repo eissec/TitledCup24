@@ -1291,8 +1291,14 @@ a.eventButton {
     gap: 20px;
   }
 
+  .bigEventCard {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
   .bigEventCard > img {
-    width: 50px;
+    width: 100px;
   }
 
   .bigEventCardTextContainer > h2 {
