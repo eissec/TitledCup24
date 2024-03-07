@@ -199,17 +199,53 @@ function getRightContentForItem(item) {
 
 // Function to hide items beyond the first 10 upon load
 document
-  .getElementById("leaderboardExpand")
-  .addEventListener("click", () => toggleItems());
+  .getElementById("leaderboardExpandOpen")
+  .addEventListener("click", () => toggleItems("leaderboardOpen", "leaderboardExpandOpen"));
 
-var eventLeaderboardItems = document.querySelectorAll(".itemLeaderboard");
-for (var i = 10; i < eventLeaderboardItems.length; i++) {
-  eventLeaderboardItems[i].classList.add("hidden");
+var eventLeaderboardItemsOpen = document.querySelectorAll("#leaderboardOpen .itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItemsOpen.length; i++) {
+  eventLeaderboardItemsOpen[i].classList.add("hidden");
 }
 
-function toggleItems() {
-  // Get all items with class "itemLeaderboard" beyond the 10th position
-  var eventLeaderboardItems = document.querySelectorAll(".itemLeaderboard");
+document
+  .getElementById("leaderboardExpandWomen")
+  .addEventListener("click", () => toggleItems("leaderboardWomen", "leaderboardExpandWomen"));
+
+var eventLeaderboardItemsWomen = document.querySelectorAll("#leaderboardWomen .itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItemsWomen.length; i++) {
+  eventLeaderboardItemsWomen[i].classList.add("hidden");
+}
+
+document
+  .getElementById("leaderboardExpandSeniors")
+  .addEventListener("click", () => toggleItems("leaderboardSeniors", "leaderboardExpandSeniors"));
+
+var eventLeaderboardItemsSeniors = document.querySelectorAll("#leaderboardSeniors .itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItemsSeniors.length; i++) {
+  eventLeaderboardItemsSeniors[i].classList.add("hidden");
+}
+
+document
+  .getElementById("leaderboardExpandJuniors")
+  .addEventListener("click", () => toggleItems("leaderboardJuniors", "leaderboardExpandJuniors"));
+
+var eventLeaderboardItemsJuniors = document.querySelectorAll("#leaderboardJuniors .itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItemsJuniors.length; i++) {
+  eventLeaderboardItemsJuniors[i].classList.add("hidden");
+}
+
+document
+  .getElementById("leaderboardExpandGirls")
+  .addEventListener("click", () => toggleItems("leaderboardGirls", "leaderboardExpandGirls"));
+
+var eventLeaderboardItemsGirls = document.querySelectorAll("#leaderboardGirls .itemLeaderboard");
+for (var i = 10; i < eventLeaderboardItemsGirls.length; i++) {
+  eventLeaderboardItemsGirls[i].classList.add("hidden");
+}
+
+function toggleItems(containerId, buttonId) {
+  // Get all items with class "itemLeaderboard" inside the specified container
+  var eventLeaderboardItems = document.querySelectorAll(`#${containerId} .itemLeaderboard`);
 
   // Loop through items starting from the 11th position and toggle classes
   for (var i = 10; i < eventLeaderboardItems.length; i++) {
@@ -218,8 +254,26 @@ function toggleItems() {
   }
 
   // Toggle the button label using getElementById
-  var button = document.getElementById("leaderboardExpand");
-  button.innerHTML = eventLeaderboardItems[10].classList.contains("hidden")
-    ? "Show top 100"
-    : "Close";
+  var button = document.getElementById(buttonId);
+  var isHidden = eventLeaderboardItems[10].classList.contains("hidden");
+  button.innerHTML = isHidden ? "Show top 100" : "Close";
+
+  // Scroll to the leaderboard element only when "Close" button is clicked
+  if (!isHidden) {
+    button.addEventListener("click", () => {
+      document.getElementById("leaderboard").scrollIntoView({ behavior: "smooth" });
+    }, { once: true });
+  }
+}
+
+//carousel
+
+function scrollCarousel(direction) {
+  const container = document.querySelector('.carousel-container');
+  const itemWidth = container.querySelector('.eventLeaderboard').offsetWidth;
+  const scrollAmount = direction > 0 ? itemWidth : -itemWidth;
+  container.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
 }
