@@ -183,7 +183,7 @@ tr {
   color: var(--black);
 }
 
-.ulBlack>li {
+.ulBlack > li {
   color: var(--black);
 }
 
@@ -237,6 +237,7 @@ a.eventButton {
   gap: 60px;
   max-width: 1100px;
   margin: auto;
+  width: 100%;
 }
 
 .topContainer {
@@ -257,7 +258,7 @@ a.eventButton {
   padding: 24px;
 }
 
-.bigEventCard>img {
+.bigEventCard > img {
   max-width: 150px !important;
 }
 
@@ -267,12 +268,12 @@ a.eventButton {
   gap: 15px;
 }
 
-.bigEventCardTextContainer>h2 {
+.bigEventCardTextContainer > h2 {
   font-size: 28px;
   text-align: start;
 }
 
-.bigEventCardTextContainer>a {
+.bigEventCardTextContainer > a {
   font-size: 22px;
   font-family: montserrat;
   font-weight: 700;
@@ -291,7 +292,7 @@ a.eventButton {
   z-index: 999;
 }
 
-#eventNav>ul {
+#eventNav > ul {
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -301,7 +302,7 @@ a.eventButton {
   gap: 1.6rem;
 }
 
-#eventNav ul>li {
+#eventNav ul > li {
   margin: 0 !important;
 }
 
@@ -385,7 +386,7 @@ a.eventButton {
   gap: 10px;
 }
 
-.winner1>img {
+.winner1 > img {
   max-width: 250px !important;
   width: 100%;
 }
@@ -406,7 +407,7 @@ a.eventButton {
   gap: 10px;
 }
 
-.winner2>img {
+.winner2 > img {
   max-width: 150px !important;
   width: 100%;
 }
@@ -646,7 +647,7 @@ a.eventButton {
   padding: 11px 16px 16px 16px;
 }
 
-.eventVideoTitle>span {
+.eventVideoTitle > span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -660,7 +661,7 @@ a.eventButton {
   line-height: 1.2em;
 }
 
-.eventVideoTitle>span {
+.eventVideoTitle > span {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2em;
@@ -851,7 +852,7 @@ a.eventButton {
   font-weight: bold;
 }
 
-.accordion>span {
+.accordion > span {
   color: var(--black);
 }
 
@@ -879,7 +880,7 @@ a.eventButton {
   color: var(--black);
 }
 
-.panel>p {
+.panel > p {
   color: var(--black80) !important;
 }
 
@@ -959,8 +960,8 @@ a.eventButton {
   font-family: montserrat;
 }
 
-.socialProfileInfo>img,
-.modal-profile-info>img {
+.socialProfileInfo > img,
+.modal-profile-info > img {
   width: 26px;
   height: 26px;
   border-radius: 100px;
@@ -979,10 +980,12 @@ a.eventButton {
 .socialPostMetaContainer {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(0deg,
-      #000 0%,
-      rgba(0, 0, 0, 0.8) 53.65%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    #000 0%,
+    rgba(0, 0, 0, 0.8) 53.65%,
+    rgba(0, 0, 0, 0) 100%
+  );
   display: flex;
   gap: 10px;
   padding: 20px;
@@ -1011,7 +1014,7 @@ a.eventButton {
   width: 100%;
 }
 
-.instaItem>img {
+.instaItem > img {
   height: 250px;
   object-fit: cover;
 }
@@ -1117,7 +1120,7 @@ a.eventButton {
   padding: 15px;
 }
 
-.topLeaderboard>span {
+.topLeaderboard > span {
   font-family: montserrat;
   font-size: 22px;
   font-weight: 700;
@@ -1132,7 +1135,7 @@ a.eventButton {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.titlesLeaderboard>span {
+.titlesLeaderboard > span {
   color: var(--mainColor);
   font-size: 17px;
   font-family: montserrat;
@@ -1161,11 +1164,11 @@ a.eventButton {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.itemLeaderboard>span {
+.itemLeaderboard > span {
   color: var(--greyBlack);
 }
 
-.itemLeaderboard>span:nth-child(2) {
+.itemLeaderboard > span:nth-child(2) {
   font-weight: 700;
 }
 
@@ -1174,11 +1177,11 @@ a.eventButton {
   gap: 5px;
 }
 
-.itemLeaderboardRanking>span {
+.itemLeaderboardRanking > span {
   color: var(--greyBlack);
 }
 
-.itemLeaderboardRanking>span:nth-child(1) {
+.itemLeaderboardRanking > span:nth-child(1) {
   font-weight: 500;
   color: var(--background);
 }
@@ -1197,7 +1200,6 @@ a.eventButton {
 .beyondVisible {
   display: flex;
 }
-
 
 /* carousel */
 .carousel-wrapper {
@@ -1239,8 +1241,8 @@ a.eventButton {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.10);
-  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.10) inset;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 .carousel-buttons-container {
@@ -1256,7 +1258,7 @@ a.eventButton {
 /* untitled events */
 
 #untitledPlayers h2 {
-  color: #F9F9F9;
+  color: #f9f9f9;
   text-align: center;
   font-size: 36px;
   font-style: normal;
@@ -1267,7 +1269,7 @@ a.eventButton {
 .untitled-info {
   margin-top: 6px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 17px;
   font-style: normal;
   font-weight: 700;
@@ -1286,8 +1288,8 @@ a.eventButton {
   display: flex;
   padding: 24px;
   border-radius: var(--radius-l, 5px);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.20);
-  background: rgba(0, 0, 0, 0.20);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   align-items: center;
   gap: 24px;
   cursor: pointer;
@@ -1295,14 +1297,13 @@ a.eventButton {
 
 .untitled-tuesdays h3,
 .untitled-bullet-brawl h3 {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
 }
-
 
 @media only screen and (max-width: 800px) {
   .modal-content {
@@ -1423,15 +1424,15 @@ a.eventButton {
     align-items: flex-start;
   }
 
-  .bigEventCard>img {
+  .bigEventCard > img {
     width: 100px;
   }
 
-  .bigEventCardTextContainer>h2 {
+  .bigEventCardTextContainer > h2 {
     font-size: 22px;
   }
 
-  .bigEventCardTextContainer>a {
+  .bigEventCardTextContainer > a {
     font-size: 17px;
   }
 
@@ -1470,7 +1471,7 @@ a.eventButton {
   }
 
   .eventPlayerNameContainer {
-    background-color: rgba(38, 37, 34, 0.75);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13%, #000 100%);
     bottom: 0;
     width: 100%;
     border-radius: 0;
@@ -1569,7 +1570,7 @@ a.eventButton {
     display: none;
   }
 
-  #eventNav>ul {
+  #eventNav > ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
