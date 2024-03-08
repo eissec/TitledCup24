@@ -267,6 +267,14 @@ function toggleItems(containerId, buttonId) {
 }
 
 //carousel
+document
+  .querySelector(".carousel-button.prev")
+  .addEventListener("click", () => scrollCarousel(-1));
+
+
+document
+  .querySelector(".carousel-button.next")
+  .addEventListener("click", () => scrollCarousel(1));
 
 function scrollCarousel(direction) {
   const container = document.querySelector('.carousel-container');
