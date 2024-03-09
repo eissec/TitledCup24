@@ -183,7 +183,7 @@ tr {
   color: var(--black);
 }
 
-.ulBlack > li {
+.ulBlack>li {
   color: var(--black);
 }
 
@@ -212,6 +212,7 @@ tr {
   font-weight: 500;
   cursor: pointer;
   min-width: 140px;
+  font-size: 14px;
 }
 
 a.eventButton {
@@ -258,7 +259,7 @@ a.eventButton {
   padding: 24px;
 }
 
-.bigEventCard > img {
+.bigEventCard>img {
   max-width: 150px !important;
 }
 
@@ -268,12 +269,12 @@ a.eventButton {
   gap: 15px;
 }
 
-.bigEventCardTextContainer > h2 {
+.bigEventCardTextContainer>h2 {
   font-size: 28px;
   text-align: start;
 }
 
-.bigEventCardTextContainer > a {
+.bigEventCardTextContainer>a {
   font-size: 22px;
   font-family: montserrat;
   font-weight: 700;
@@ -292,7 +293,7 @@ a.eventButton {
   z-index: 999;
 }
 
-#eventNav > ul {
+#eventNav>ul {
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -302,7 +303,7 @@ a.eventButton {
   gap: 1.6rem;
 }
 
-#eventNav ul > li {
+#eventNav ul>li {
   margin: 0 !important;
 }
 
@@ -386,7 +387,7 @@ a.eventButton {
   gap: 10px;
 }
 
-.winner1 > img {
+.winner1>img {
   max-width: 250px !important;
   width: 100%;
 }
@@ -407,7 +408,7 @@ a.eventButton {
   gap: 10px;
 }
 
-.winner2 > img {
+.winner2>img {
   max-width: 150px !important;
   width: 100%;
 }
@@ -647,7 +648,7 @@ a.eventButton {
   padding: 11px 16px 16px 16px;
 }
 
-.eventVideoTitle > span {
+.eventVideoTitle>span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -661,7 +662,7 @@ a.eventButton {
   line-height: 1.2em;
 }
 
-.eventVideoTitle > span {
+.eventVideoTitle>span {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2em;
@@ -852,7 +853,7 @@ a.eventButton {
   font-weight: bold;
 }
 
-.accordion > span {
+.accordion>span {
   color: var(--black);
 }
 
@@ -880,7 +881,7 @@ a.eventButton {
   color: var(--black);
 }
 
-.panel > p {
+.panel>p {
   color: var(--black80) !important;
 }
 
@@ -960,8 +961,8 @@ a.eventButton {
   font-family: montserrat;
 }
 
-.socialProfileInfo > img,
-.modal-profile-info > img {
+.socialProfileInfo>img,
+.modal-profile-info>img {
   width: 26px;
   height: 26px;
   border-radius: 100px;
@@ -980,12 +981,10 @@ a.eventButton {
 .socialPostMetaContainer {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(
-    0deg,
-    #000 0%,
-    rgba(0, 0, 0, 0.8) 53.65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.8) 53.65%,
+      rgba(0, 0, 0, 0) 100%);
   display: flex;
   gap: 10px;
   padding: 20px;
@@ -1014,7 +1013,7 @@ a.eventButton {
   width: 100%;
 }
 
-.instaItem > img {
+.instaItem>img {
   height: 250px;
   object-fit: cover;
 }
@@ -1105,7 +1104,6 @@ a.eventButton {
 
 /*Leaderboard stuff*/
 .eventLeaderboard {
-  width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1120,10 +1118,11 @@ a.eventButton {
   padding: 15px;
 }
 
-.topLeaderboard > span {
+.topLeaderboard>span {
   font-family: montserrat;
   font-size: 22px;
   font-weight: 700;
+  line-height: 28px;
 }
 
 .titlesLeaderboard {
@@ -1135,11 +1134,12 @@ a.eventButton {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.titlesLeaderboard > span {
+.titlesLeaderboard>span {
   color: var(--mainColor);
   font-size: 17px;
   font-family: montserrat;
   font-weight: 700;
+  line-height: 24px;
 }
 
 .contentLeaderboard {
@@ -1162,13 +1162,14 @@ a.eventButton {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  align-items: center;
 }
 
-.itemLeaderboard > span {
+.itemLeaderboard>span {
   color: var(--greyBlack);
 }
 
-.itemLeaderboard > span:nth-child(2) {
+.itemLeaderboard>span:nth-child(2) {
   font-weight: 700;
 }
 
@@ -1177,13 +1178,21 @@ a.eventButton {
   gap: 5px;
 }
 
-.itemLeaderboardRanking > span {
+.itemLeaderboardRanking>span {
   color: var(--greyBlack);
+  line-height: 20px;
+
 }
 
-.itemLeaderboardRanking > span:nth-child(1) {
+.itemLeaderboardRanking>span:nth-child(1) {
   font-weight: 500;
   color: var(--background);
+}
+
+.itemLeaderboardRanking>span:nth-child(1),
+.itemLeaderboardRanking>span:nth-child(2) {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .buttonLeaderboardContainer {
@@ -1269,11 +1278,12 @@ a.eventButton {
 .untitled-info {
   margin-top: 6px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 17px;
+  font-size: 17px !important;
+  margin-bottom: 20px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  color: #FFFFFF99 !important;
 }
 
 .untitled-events {
@@ -1304,7 +1314,15 @@ a.eventButton {
   font-weight: 700;
   line-height: 28px;
   margin: 0;
+  font-family: montserrat;
 }
+
+.untitled-tuesdays img,
+.untitled-bullet-brawl img {
+  width: auto;
+  height: 48px;
+}
+
 
 .title-container h2 {
   margin: 0;
@@ -1334,8 +1352,23 @@ a.eventButton {
     align-items: start;
   }
 
+  .untitled-tuesdays h3,
+  .untitled-bullet-brawl h3 {
+    font-size: 16px;
+  }
+
+  .untitled-tuesdays img,
+  .untitled-bullet-brawl img {
+    width: 22px;
+    height: auto;
+  }
+
   .carousel-buttons-container {
     margin-top: 20px;
+  }
+
+  .untitled-events {
+    gap: 8px;
   }
 }
 
@@ -1449,15 +1482,15 @@ a.eventButton {
     align-items: flex-start;
   }
 
-  .bigEventCard > img {
+  .bigEventCard>img {
     width: 100px;
   }
 
-  .bigEventCardTextContainer > h2 {
+  .bigEventCardTextContainer>h2 {
     font-size: 22px;
   }
 
-  .bigEventCardTextContainer > a {
+  .bigEventCardTextContainer>a {
     font-size: 17px;
   }
 
@@ -1595,7 +1628,7 @@ a.eventButton {
     display: none;
   }
 
-  #eventNav > ul {
+  #eventNav>ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -1652,5 +1685,17 @@ a.eventButton {
 
   .endTournamentNote {
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel-container {
+    grid-template-columns: repeat(5, 87%);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .carousel-container {
+    grid-template-columns: repeat(5, 100%);
   }
 }
