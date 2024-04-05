@@ -1168,7 +1168,7 @@ a.eventButton {
 }
 
 .itemLeaderboard > span {
-  color: var(--greyBlack);
+  color: var(--background);
 }
 
 .itemLeaderboard > span:nth-child(2) {
@@ -1181,7 +1181,7 @@ a.eventButton {
 }
 
 .itemLeaderboardRanking > span {
-  color: var(--greyBlack);
+  color: var(--background);
   line-height: 20px;
 }
 
