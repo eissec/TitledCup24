@@ -129,7 +129,7 @@ h2 {
   margin: 0 !important;
 }
 
-span {
+.post-view-content span {
   color: var(--white);
   line-height: 1.6em;
 }
