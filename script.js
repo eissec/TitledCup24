@@ -65,34 +65,34 @@ for (let i = 0; i < acc.length; i++) {
 
 ////*** The masonry JS stuff ***/
 // Create a script element
-var script = document.createElement("script");
+// var script = document.createElement("script");
 
-// Set the source attribute to the Isotope library URL
-script.src =
-  "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js";
+// // Set the source attribute to the Isotope library URL
+// script.src =
+//   "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js";
 
-// Set the onload callback to initialize Isotope after the script has loaded
-script.onload = function () {
-  // Initialize Isotope
-  var grid = document.querySelector(".masonry-grid");
-  var isotope = new Isotope(grid, {
-    itemSelector: ".grid-item",
-    masonry: {
-      columnWidth: ".grid-item",
-      gutter: 20,
-      isFitWidth: true,
-    },
-  });
+// // Set the onload callback to initialize Isotope after the script has loaded
+// script.onload = function () {
+//   // Initialize Isotope
+//   var grid = document.querySelector(".masonry-grid");
+//   var isotope = new Isotope(grid, {
+//     itemSelector: ".grid-item",
+//     masonry: {
+//       columnWidth: ".grid-item",
+//       gutter: 20,
+//       isFitWidth: true,
+//     },
+//   });
 
-  // Trigger Isotope layout after each image is loaded
-  const images = grid.querySelectorAll("img");
-  images.forEach((image) => {
-    image.addEventListener("load", () => isotope.layout());
-  });
-};
+//   // Trigger Isotope layout after each image is loaded
+//   const images = grid.querySelectorAll("img");
+//   images.forEach((image) => {
+//     image.addEventListener("load", () => isotope.layout());
+//   });
+// };
 
-// Append the script element to the document body
-document.body.appendChild(script);
+// // Append the script element to the document body
+// document.body.appendChild(script);
 
 // Get modal elements
 var modal = document.getElementById("itemModal");
